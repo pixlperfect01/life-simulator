@@ -1,0 +1,13 @@
+//array formatting
+/*
+main
+  head
+    eyes
+      ...
+    ears
+      ...
+    nose
+      ...
+    hair
+      ...
+    
