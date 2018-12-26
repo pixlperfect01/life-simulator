@@ -1,4 +1,4 @@
-function player(name,cls){
+function player(name,cls,id){
   this.name=name;
   this.color="#FF0000";
   this.x=0;
@@ -9,5 +9,6 @@ function player(name,cls){
   this.lives=5;
   this.health=100;
   this.class=cls;
+  this.id=id;
   this.powerUps=[0,0,0,0];//jump,flight,ex health,sheild
 }
