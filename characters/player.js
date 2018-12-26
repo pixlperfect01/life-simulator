@@ -10,5 +10,5 @@ function player(name,cls,id){
   this.health=100;
   this.class=cls;
   this.id=id;
-  this.powerUps=[0,0,0,0];//jump,flight,ex health,sheild
+  this.powerUps=[0,0,0,0,0,0,0];//high jump,dbl jump,flight,ex health,sheild,dbl coins,speed boost
 }
