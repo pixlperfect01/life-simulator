@@ -8,6 +8,7 @@ right: false
 } 
 function keyUpdate(keyEvent, down) { 
 // down is a boolean, whether the key event is keydown (true) or keyup (false) 
+console.log(keyEvent.keyCode);
 switch (keyEvent.keyCode) { 
 case 38: keys.up = down; 
 break; 
