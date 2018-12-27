@@ -3,6 +3,10 @@ players.length=4;
 for(var i=0;i<players.length;i++){
 players[i]=new player("","classic",i);
 }
+function LEVEL1x(){
+  players[0].x=20;
+  players[0].y=c.height-20;
+}
 function LEVEL1(){
   ctx.clearRect(0,0,c.width,c.height);
 /*
