@@ -1,46 +1,43 @@
 var players=[];
 players.length=4;
-for(var i=0;i<players.length;i++){
-players[i]=new player("","classic",i);
-}
-function LEVEL1x(){
-  for(var i=0;i<players.length;i++){
-    players[i].x=20;
-    players[i].y=c.height-20;
+var AOP=1;
+var level=["0000000000","0........0","0........0","0........0","0~~~~~~~~0","0000000000","0000000000","0........0","0.@.......0","0000000000"];
+for(var i=0;i<level.length;i++){
+  for(var ii=0;ii<level[i].length;ii++){
+    if(level[i].charAt(ii)=="@")
+      coords=[ii,i];
   }
-  LEVEL1();
 }
-function LEVEL1(){
+
+for(var i=0;i<players.length;i++){
+  players[i]=new player("","classic",i);
+  players[i].x=coords[0]*(c.width/10);
+  players[i].y=coords[1]*(c.height/10);
+}
+
+function LEVEL(){
   ctx.clearRect(0,0,c.width,c.height);
-/*
-if(keys.down)
-players[0].y+=1;
-*/
-  players[0].color="rgb("+Math.trunc(Math.random()*255)+","+Math.trunc(Math.random()*255)+","+Math.trunc(Math.random()*255)+")";
-  if(keys.left&&collision1(players[0])[0]==false)
-    players[0].left()
-  if(keys.right&&collision1(players[0])[1]==false)
-    players[0].right();
-  if(keys.up&&collision1(players[0])[2]==false)
-    players[0].up();
-  if(collision1(players[0])[3]==false)
-    players[0].down();
-  if(!keys.left&&!keys.right&&!keys.up&&!keys.down)
-    players[0].stay();
-  for(var i=0;i<players.length;i++){
+  for(var i=0;i<AOP;i++){
+    if(keys.left&&collision(players[i])[0])
+      players[i].left();
+    if(keys.right&&collision(players[i])[1])
+      players[i].right();
+    if(keys.up&&collision(players[i])[2])
+      players[i].up();
     players[i].draw();
   }
   window.requestAnimationFrame(LEVEL1);
 }
 function collision1(player){
-  var cols=[false,false,false,false];//L,R,U,D
-  if(player.x<=0)
-    cols[0]=true;
-  if(player.x>=c.width)
-    cols[1]=true;
-  if(player.y<=0)
-    cols[2]=true;
-  if(player.y>=c.height)
-    cols[3]=true;
+  var cols=[true,true,true,true];
+  var sec=c.width/level[0].length;
+  if(level[Math.trunc(player.y/sec)].charAt(Math.trunc(player.x/sec)-1)=="0")
+    cols[0]=false;
+  if(level[Math.trunc(player.y/sec)].charAt(Math.trunc(player.x/sec)+1)=="0")
+    cols[1]=false;
+  if(level[Math.trunc(player.y/sec)-1].charAt(Math.trunc(player.x/sec)+1)=="0")
+    cols[2]=false;
+  if(level[Math.trunc(player.y/sec)+1].charAt(Math.trunc(player.x/sec)+1)=="0")
+    cols[3]=false;
   return cols;
 }
