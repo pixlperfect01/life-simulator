@@ -20,6 +20,7 @@ function player(name,char,id){
     ctx.fillStyle="#FFFFFF";
     ctx.strokeStyle="#000000";
     ctx.fill();
+    ctx.stroke();
     ctx.beginPath();
     if(this.move!==false){
       if(this.move==="left")
@@ -35,6 +36,7 @@ function player(name,char,id){
     }
     ctx.fillStyle="#000000";
     ctx.fill();
+    ctx.stroke();
   }
   this.left=function(){
     this.move="left";
