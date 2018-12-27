@@ -8,7 +8,7 @@ function player(name,char,id){
   this.wins=0;
   this.lives=5;
   this.health=100;
-  this.class=cls;
+  this.class=char;
   this.id=id;
   this.move=false;
   this.powerUps=[0,0,0,0,0,0,0];//high jump,dbl jump,flight,ex health,sheild,dbl coins,speed boost
