@@ -12,6 +12,7 @@ function player(name,cls,id){
   this.id=id;
   this.powerUps=[0,0,0,0,0,0,0];//high jump,dbl jump,flight,ex health,sheild,dbl coins,speed boost
   this.draw=function(){
+    ctx.fillStyle=this.color;
     ctx.fillRect(this.x,this.y,20,20);
   }
 }
