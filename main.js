@@ -1,7 +1,9 @@
-var players=[];
+var players,AOP,level,coords;
+function LEVELx(){
+players=[];
 players.length=4;
-var AOP=1;
-var level=["0000000000","0........0","0........0","0........0","0~~~~~~~~0","0000000000","0000000000","0........0","0.@.......0","0000000000"];
+AOP=1;
+level=["0000000000","0........0","0........0","0........0","0~~~~~~~~0","0000000000","0000000000","0........0","0.@.......0","0000000000"];
 for(var i=0;i<level.length;i++){
   for(var ii=0;ii<level[i].length;ii++){
     if(level[i].charAt(ii)=="@")
@@ -14,7 +16,8 @@ for(var i=0;i<players.length;i++){
   players[i].x=coords[0]*(c.width/10);
   players[i].y=coords[1]*(c.height/10);
 }
-
+  LEVEL();
+}
 function LEVEL(){
   ctx.clearRect(0,0,c.width,c.height);
   for(var i=0;i<AOP;i++){
