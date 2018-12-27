@@ -5,7 +5,8 @@
  function run(){
   var c=document.getElementById('myCanvas');
   var ctx=c.getContext('2d');
+  LEVEL1();
  }
 </script>
 <button onclick="run()" hidden></button>
-<canvas id="myCanvas"></canvas>
+<canvas onload="run()" id="myCanvas"></canvas>
