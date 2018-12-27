@@ -26,11 +26,11 @@ function player(name,char,id){
       if(this.move==="left")
         ctx.arc(this.x+4,this.y+10,3,0,2*Math.PI);
       if(this.move==="right")
-        ctx.arc(this.x+11,this.y+10,3,0,2*Math.PI);
+        ctx.arc(this.x+14,this.y+10,3,0,2*Math.PI);
       if(this.move==="up")
         ctx.arc(this.x+10,this.y+4,3,0,2*Math.PI);
       if(this.move==="down")
-        ctx.arc(this.x+10,this.y+11,3,0,2*Math.PI);
+        ctx.arc(this.x+10,this.y+14,3,0,2*Math.PI);
     }else{
       ctx.arc(this.x+10,this.y+10,3,0,2*Math.PI);
     }
