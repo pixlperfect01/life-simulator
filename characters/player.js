@@ -19,6 +19,7 @@ function player(name,char,id){
     ctx.arc(this.x+10,this.y+10,7,0,360);
     ctx.fillStyle="#FFFFFF";
     ctx.strokeStyle="#000000";
+    ctx.lineWidth=0;
     ctx.fill();
     ctx.stroke();
     ctx.beginPath();
@@ -26,11 +27,11 @@ function player(name,char,id){
       if(this.move==="left")
         ctx.arc(this.x+7,this.y+10,3,0,2*Math.PI);
       if(this.move==="right")
-        ctx.arc(this.x+11,this.y+10,3,0,2*Math.PI);
+        ctx.arc(this.x+13,this.y+10,3,0,2*Math.PI);
       if(this.move==="up")
         ctx.arc(this.x+10,this.y+7,3,0,2*Math.PI);
       if(this.move==="down")
-        ctx.arc(this.x+10,this.y+11,3,0,2*Math.PI);
+        ctx.arc(this.x+10,this.y+13,3,0,2*Math.PI);
     }else{
       ctx.arc(this.x+10,this.y+10,3,0,2*Math.PI);
     }
