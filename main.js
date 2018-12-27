@@ -34,13 +34,13 @@ function LEVEL(){
 function collision1(player){
   var cols=[true,true,true,true];
   var sec=c.width/level[0].length;
-  if(level[Math.trunc(player.y/sec)].charAt(Math.trunc(player.x/sec)-1)=="0")
+  if(level[Math.trunc(player.y/sec)].charAt(Math.trunc((player.x/sec))-1)=="0")
     cols[0]=false;
-  if(level[Math.trunc(player.y/sec)].charAt(Math.trunc(player.x/sec)+1)=="0")
+  if(level[Math.trunc(player.y/sec)].charAt(Math.trunc((player.x/sec)+1))=="0")
     cols[1]=false;
-  if(level[Math.trunc(player.y/sec)-1].charAt(Math.trunc(player.x/sec)+1)=="0")
+  if(level[Math.trunc((player.y/sec)-1)].charAt(Math.trunc(player.x/sec)=="0")
     cols[2]=false;
-  if(level[Math.trunc(player.y/sec)+1].charAt(Math.trunc(player.x/sec)+1)=="0")
+  if(level[Math.trunc((player.y/sec)+1)].charAt(Math.trunc(player.x/sec))=="0")
     cols[3]=false;
   return cols;
 }
