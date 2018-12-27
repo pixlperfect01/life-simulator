@@ -47,4 +47,7 @@ function player(name,char,id){
     this.move="down";
     this.y++;
   }
+  this.stay=function(){
+    this.move=false;
+  }
 }
