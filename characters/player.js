@@ -15,21 +15,26 @@ function player(name,char,id){
   this.draw=function(){
     ctx.fillStyle=this.color;
     ctx.fillRect(this.x,this.y,20,20);
-    ctx.fillStyle="#FFFFFF";
+    ctx.beginPath();
     ctx.arc(this.x+10,this.y+10,7,0,360);
-    ctx.fillStyle="#000000";
+    ctx.fillStyle="#FFFFFF";
+    ctx.strokeStyle="#000000";
+    ctx.fill();
+    ctx.beginPath();
     if(this.move!==false){
       if(this.move==="left")
-        ctx.arc(this.x+4,this.y+10,3,0,360);
+        ctx.arc(this.x+4,this.y+10,3,0,2*Math.PI);
       if(this.move==="right")
-        ctx.arc(this.x+11,this.y+10,3,0,360);
+        ctx.arc(this.x+11,this.y+10,3,0,2*Math.PI);
       if(this.move==="up")
-        ctx.arc(this.x+10,this.y+4,3,0,360);
+        ctx.arc(this.x+10,this.y+4,3,0,2*Math.PI);
       if(this.move==="down")
-        ctx.arc(this.x+10,this.y+11,3,0,360);
+        ctx.arc(this.x+10,this.y+11,3,0,2*Math.PI);
     }else{
-      ctx.arc(this.x+10,this.y+10,3,0,360);
+      ctx.arc(this.x+10,this.y+10,3,0,2*Math.PI);
     }
+    ctx.fillStyle="#000000";
+    ctx.fill();
   }
   this.left=function(){
     this.move="left";
