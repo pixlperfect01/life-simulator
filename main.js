@@ -19,9 +19,9 @@ players[0].y+=1;
   players[0].color="rgb("+Math.trunc(Math.random()*255)+","+Math.trunc(Math.random()*255)+","+Math.trunc(Math.random()*255)+")";
   if(keys.left&&!collision1(players[0])[0])
     players[0].left()
-  if(keys.right&&!collision1(players[0])[2])
+  if(keys.right&&!collision1(players[0])[1])
     players[0].right();
-  if(keys.up&&!collision1(players[0])[3])
+  if(keys.up&&!collision1(players[0])[2])
     players[0].up();
   if(!collision1(players[0])[3])
     players[0].down();
@@ -42,4 +42,5 @@ function collision1(player){
     cols[2]=true;
   if(player.y>=c.height)
     cols[3]=true;
+  return cols;
 }
