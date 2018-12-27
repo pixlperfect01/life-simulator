@@ -1,5 +1,6 @@
-var players=[0,0,0,0];
-for(var i=0;i<4;i++){
+var players=[];
+players.length=4;
+for(var i=0;i<players.length;i++){
 players[i]=new player("","classic",i);
 }
 function LEVEL1(){
