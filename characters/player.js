@@ -39,7 +39,7 @@ function player(name,char,id){
     this.move="right";
     this.x++;
   }
-  this.up=function(){
+  this.jump=function(){
     this.move="up";
     this.y--;
   }
