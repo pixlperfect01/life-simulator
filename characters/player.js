@@ -33,9 +33,9 @@ function player(id){
   this.uC=0;
   this.draw=function(){
     ctx.fillStyle=this.color;
-    ctx.fillRect(this.x,this.y,15,15);
+    ctx.fillRect(this.x,this.y,10,15);
     ctx.beginPath();
-    ctx.arc(this.x+10,this.y+10,7,0,360);
+    ctx.arc(this.x+5,this.y+5,5,0,360);
     ctx.fillStyle="#FFFFFF";
     ctx.strokeStyle="#000000";
     ctx.lineWidth=0;
@@ -44,15 +44,15 @@ function player(id){
     ctx.beginPath();
     if(this.move!==false){
       if(this.move==="left")
-        ctx.arc(this.x+7,this.y+10,3,0,2*Math.PI);
+        ctx.arc(this.x+2,this.y+5,2,0,2*Math.PI);
       if(this.move==="right")
-        ctx.arc(this.x+13,this.y+10,3,0,2*Math.PI);
+        ctx.arc(this.x+8,this.y+5,2,0,2*Math.PI);
       if(this.move==="up")
-        ctx.arc(this.x+10,this.y+7,3,0,2*Math.PI);
+        ctx.arc(this.x+5,this.y+2,2,0,2*Math.PI);
       if(this.move==="down")
-        ctx.arc(this.x+10,this.y+13,3,0,2*Math.PI);
+        ctx.arc(this.x+5,this.y+8,2,0,2*Math.PI);
     }else{
-      ctx.arc(this.x+10,this.y+10,3,0,2*Math.PI);
+      ctx.arc(this.x+5,this.y+5,2,0,2*Math.PI);
     }
     ctx.fillStyle="#000000";
     ctx.fill();
