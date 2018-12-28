@@ -1,0 +1,1 @@
+function basicMob(x,y){
