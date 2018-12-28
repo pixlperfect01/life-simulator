@@ -9,10 +9,10 @@ function player(id){
   this.id=id;
   this.move=false;
   if(id===0){
-    this.up="keys.up";
-    this.down="keys.down";
-    this.left="keys.left";
-    this.right="keys.right";
+    this.upKey="keys.up";
+    this.downKey="keys.down";
+    this.leftKey="keys.left";
+    this.rightKey="keys.right";
   }else if(id===1){
     this.upKey="keys.w";
     this.downKey="keys.s";
