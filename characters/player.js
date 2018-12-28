@@ -33,7 +33,7 @@ function player(id){
   this.uC=0;
   this.draw=function(){
     ctx.fillStyle=this.color;
-    ctx.fillRect(this.x,this.y,10,15);
+    ctx.fillRect(this.x,this.y,15,15);
     ctx.beginPath();
     ctx.arc(this.x+5,this.y+5,5,0,360);
     ctx.fillStyle="#FFFFFF";
