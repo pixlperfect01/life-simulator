@@ -34,7 +34,7 @@ function LEVEL(){
       players[0].up();
     players[i].draw();
   }
-  window.requestAnimationFrame(LEVEL1);
+  window.requestAnimationFrame(LEVEL);
 }
 function collision1(player){
   var cols=[true,true,true,true];
