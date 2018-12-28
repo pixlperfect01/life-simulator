@@ -4,7 +4,7 @@ function LEVELx(){
   players=[];
   players.length=4;
   AOP=1;
-  level=["0000000000","0........0","0........0","0........0","0........0","0000000000","0000000000","0........0","0.....@...0","0000000000"];
+  level=["00000000000000000000","0..................0","0..................0","0..................0","0..................0","00000000000000000000","00000000000000000000","0..................0","0...............@...0","00000000000000000000"];
   for(var i=0;i<level.length;i++){
     for(var ii=0;ii<level[i].length;ii++){
       if(level[i].charAt(ii)=="@")
@@ -14,8 +14,8 @@ function LEVELx(){
 
   for(var i=0;i<players.length;i++){
     players[i]=new player("","classic",i);
-    players[i].x=coords[0]*(c.width/10);
-    players[i].y=coords[1]*(c.height/10);
+    players[i].x=coords[0]*(15);
+    players[i].y=coords[1]*(15);
   }
   LEVEL();
 }
@@ -38,7 +38,7 @@ function LEVEL(){
 }
 function collision(player){
   var cols=[true,true,true,true];
-  var sec=c.width/level[0].length;
+  var sec=15;
   if(level[Math.trunc(player.y/sec)].charAt(Math.trunc((player.x-1)/sec))=="0")
     cols[0]=false;
   if(level[Math.trunc(player.y/sec)].charAt(Math.trunc((player.x+1)/sec))=="0")
