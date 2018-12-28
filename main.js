@@ -36,7 +36,7 @@ function LEVEL(){
   }
   window.requestAnimationFrame(LEVEL);
 }
-function collision1(player){
+function collision(player){
   var cols=[true,true,true,true];
   var sec=c.width/level[0].length;
   if(level[Math.trunc(player.y/sec)].charAt(Math.trunc((player.x-1)/sec))=="0")
@@ -51,5 +51,5 @@ function collision1(player){
 }
 function jumpTest(player){
   
-  
+  return true;
 }
