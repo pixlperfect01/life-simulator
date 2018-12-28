@@ -3,15 +3,21 @@ function player(name,char,id){
   this.color="#FF0000";
   this.x=0;
   this.y=0;
-  this.lvlsc=0;
-  this.score=0;
-  this.wins=0;
+  this.money=0;
   this.lives=5;
-  this.health=100;
+  this.health=3;
   this.class=char;
   this.id=id;
   this.move=false;
+  if(id===0){
+    this.up="keys.up";
+    this.down="keys.down";
+    this.left="keys.left";
+    this.right="keys.right";
+  }else if(id===1){
+    
   this.powerUps=[0,0,0,0,0,0,0];//high jump,dbl jump,flight,ex health,sheild,dbl coins,speed boost
+  this.uC=0;
   this.draw=function(){
     ctx.fillStyle=this.color;
     ctx.fillRect(this.x,this.y,20,20);
