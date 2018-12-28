@@ -21,16 +21,16 @@ function LEVELx(){
 }
 function LEVEL(){
   ctx.clearRect(0,0,c.width,c.height);
-  if(keys.up)
-    players[0].jC++;
-  if(!keys.up)
-    players[0].jC=0;
   for(var i=0;i<AOP;i++){
-    if(eval(players[i].left)&&collision(players[i])[0])
+  if(eval(players[i].upKey))
+    players[i].jC++;
+  if(!eval(players[i].upKey))
+    players[i].jC=0;
+    if(eval(players[i].leftKey)&&collision(players[i])[0])
       players[0].left();
-    if(eval(players[i].right)&&collision(players[i])[1])
+    if(eval(players[i].rightKey)&&collision(players[i])[1])
       players[0].right();
-    if(eval(players[i].up)&&collision(players[i])[2]&&jumpTest(players[i]))
+    if(eval(players[i].upKey)&&collision(players[i])[2]&&jumpTest(players[i]))
       players[0].up();
     players[i].draw();
   }
