@@ -14,20 +14,20 @@ function player(id){
     this.left="keys.left";
     this.right="keys.right";
   }else if(id===1){
-    this.up="keys.w";
-    this.down="keys.s";
-    this.left="keys.a";
-    this.right="keys.d"
+    this.upKey="keys.w";
+    this.downKey="keys.s";
+    this.leftKey="keys.a";
+    this.rightKey="keys.d"
   }else if(id===2){
-    this.up="keys.t";
-    this.down="keys.g";
-    this.left="keys.f";
-    this.right="keys.h";
+    this.upKey="keys.t";
+    this.downKey="keys.g";
+    this.leftKey="keys.f";
+    this.rightKey="keys.h";
   }else if(id===3){
-    this.up="keys.i";
-    this.down="keys.k";
-    this.left="keys.j";
-    this.right="keys.l";
+    this.upKey="keys.i";
+    this.downKey="keys.k";
+    this.leftKey="keys.j";
+    this.rightKey="keys.l";
   }
   this.powerUps=[0,0,0,0,0,0,0];//high jump,dbl jump,flight,ex health,sheild,dbl coins,speed boost
   this.uC=0;
