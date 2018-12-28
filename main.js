@@ -26,11 +26,11 @@ function LEVEL(){
   if(!keys.up)
     players[0].jC=0;
   for(var i=0;i<AOP;i++){
-    if(keys.left&&collision(players[i])[0])
+    if(eval(players[i].left)&&collision(players[i])[0])
       players[0].left();
-    if(keys.right&&collision(players[i])[1])
+    if(eval(players[i].right)&&collision(players[i])[1])
       players[0].right();
-    if(keys.up&&collision(players[i])[2]&&jumpTest(players[i]))
+    if(eval(players[i].up)&&collision(players[i])[2]&&jumpTest(players[i]))
       players[0].up();
     players[i].draw();
   }
