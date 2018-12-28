@@ -49,3 +49,7 @@ function collision1(player){
     cols[3]=false;
   return cols;
 }
+function jumpTest(player){
+  
+  
+}
