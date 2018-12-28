@@ -15,7 +15,10 @@ function player(name,char,id){
     this.left="keys.left";
     this.right="keys.right";
   }else if(id===1){
-    
+    this.up="keys.w";
+    this.down="keys.s";
+    this.left="keys.a";
+    this.right="keys.d"
   this.powerUps=[0,0,0,0,0,0,0];//high jump,dbl jump,flight,ex health,sheild,dbl coins,speed boost
   this.uC=0;
   this.draw=function(){
