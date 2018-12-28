@@ -1,5 +1,5 @@
-function player(name,id){
-  this.name=name;
+function player(id){
+  this.name="Player "+(id+1);
   this.color="#FF0000";
   this.x=0;
   this.y=0;
