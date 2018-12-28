@@ -18,6 +18,16 @@ function player(name,id){
     this.down="keys.s";
     this.left="keys.a";
     this.right="keys.d"
+  }else if(id===2){
+    this.up="keys.t";
+    this.down="keys.g";
+    this.left="keys.f";
+    this.right="keys.h";
+  }else if(id===3){
+    this.up="keys.i";
+    this.down="keys.k";
+    this.left="keys.j";
+    this.right="keys.l";
   }
   this.powerUps=[0,0,0,0,0,0,0];//high jump,dbl jump,flight,ex health,sheild,dbl coins,speed boost
   this.uC=0;
