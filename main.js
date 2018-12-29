@@ -18,7 +18,7 @@ function drawLevel(){
     for(var ii=0;ii<level[i].length;ii++){
       if(level[i].charAt(ii)==="0"){
         ctx.fillStyle="#000000";
-        ctx.fillRect(ii*25,i*25,20,20);
+        ctx.fillRect(ii*25,i*25,25,25);
       }
     }
   }
