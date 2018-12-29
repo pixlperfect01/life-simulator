@@ -10,7 +10,7 @@ function menuMain(){
 function play(){
   ctx.clearRect(0,0,500,500);
   drawLevel();
-  window.requestAnimationFrame(plqy);
+  window.requestAnimationFrame(play);
 }
 
 function drawLevel(){
