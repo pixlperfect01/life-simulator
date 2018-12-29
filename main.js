@@ -8,6 +8,7 @@ function menuMain(){
 }
 
 function level(){
+  ctx.clearRect(0,0,500,500);
   drawLevel();
   window.requestAnimationFrame(level);
 }
@@ -15,8 +16,10 @@ function level(){
 function drawLevel(){
   for(var i=0;i<level.length;i++){
     for(var ii=0;ii<level[i].length;ii++){
-      ctx.fillStyle="#000000";
-      ctx.fillRect(ii*25,i*25,20,20);
+      if(level[i].charAt(ii)==="0"){
+        ctx.fillStyle="#000000";
+        ctx.fillRect(ii*25,i*25,20,20);
+      }
     }
   }
 }
