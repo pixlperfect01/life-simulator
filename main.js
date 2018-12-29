@@ -23,3 +23,9 @@ function drawLevel(){
     }
   }
 }
+
+function player(x,y){
+  this.x=x;
+  this.y=y;
+  this.color="#FF0000";
+}
