@@ -7,7 +7,7 @@ function menuMain(){
   for(var i=0;i<level.length;i++){
     for(var ii=0;ii<level[i].length;ii++){
       if(level[i].charAt(ii)==="@")
-        coords=[ii*25.i*25];
+        coords=[ii*25,i*25];
     }
   }
   player=new Player(coords[0],coords[1]);
