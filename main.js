@@ -7,7 +7,7 @@ function menuMain(){
   play();
 }
 
-function level(){
+function play(){
   ctx.clearRect(0,0,500,500);
   drawLevel();
   window.requestAnimationFrame(level);
