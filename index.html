@@ -1,13 +1,4 @@
 <script src="data/keys.js"></script>
 <script src="characters/player.js"></script>
 <script src="main.js"></script>
-<script>
- var c,ctx;
- function run(){
-  c=document.getElementById('myCanvas');
-  ctx=c.getContext('2d');
-  LEVELx();
- }
-</script>
-<button onclick="run()">go</button>
-<canvas id="myCanvas"></canvas>
+<canvas onload="setTimeout(menuMain,500);" width="500" height="500" id="myCanvas"></canvas>
